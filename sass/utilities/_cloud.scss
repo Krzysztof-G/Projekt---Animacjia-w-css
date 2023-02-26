@@ -1,0 +1,44 @@
+.clouds {
+	position: absolute;
+	&:nth-child(2) {
+		top: 8vh;
+		left: 10vh;
+	}
+	&:nth-child(3) {
+		top: 5vh;
+		left: 19vh;
+	}
+	&:nth-child(4) {
+		top: -8vh;
+		left: 13vh;
+	}
+	.cloud {
+		position: absolute;
+		top: 10vh;
+		left: 1vh;
+		height: 5vh;
+		width: 5vh;
+		background-color: #fff;
+		border-radius: 35px 0 25px 20px;
+		box-shadow: 0 0 20px 11px;
+		&:nth-child(2) {
+			position: absolute;
+			top: 9vh;
+			left: 3vh;
+			border-radius: 25px 15px 0 0;
+		}
+		&:nth-child(3) {
+			position: absolute;
+			top: 10vh;
+			left: 4vh;
+			width: 8vh;
+			border-radius: 25px 35px 25px 0;
+		}
+		&:nth-child(4) {
+			position: absolute;
+			top: 11vh;
+			left: 6vh;
+			border-radius: 0 0 25px 15px;
+		}
+	}
+}
