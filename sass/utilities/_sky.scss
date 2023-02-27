@@ -1,10 +1,13 @@
+@use './animation' as animation;
 .sky {
 	position: relative;
 	height: 60vh;
 	width: 100%;
 	background-color: royalblue;
+	animation: sky 7s linear 1;
 	.clouds {
 		position: absolute;
+		animation: clouds 8s linear 1;
 		&:nth-child(2) {
 			top: 8vh;
 			left: 10vh;
@@ -26,6 +29,7 @@
 			background-color: #fff;
 			border-radius: 35px 0 25px 20px;
 			box-shadow: 0 0 20px 11px;
+
 			&:nth-child(2) {
 				position: absolute;
 				top: 9vh;
@@ -50,12 +54,13 @@
 
 	.sun {
 		position: absolute;
-		top: 5%;
-		left: 10%;
+		top: 10px;
+		left: 300px;
 		width: 100px;
 		height: 100px;
 		background-color: goldenrod;
 		border-radius: 50%;
 		box-shadow: 0 0 100px 50px goldenrod;
+		animation: sun 8s linear 1;
 	}
 }

@@ -1,0 +1,53 @@
+@keyframes sky {
+	0% {
+		background-color: black;
+	}
+	40% {
+		background-color: royalblue;
+	}
+	60% {
+		background-color: royalblue;
+	}
+	100% {
+		background-color: black;
+	}
+}
+
+@keyframes sun {
+	0% {
+		top: 1000px;
+	}
+	40% {
+		top: 100px;
+	}
+	60% {
+		top: 100px;
+	}
+	100% {
+		top: 1000px;
+	}
+}
+
+@keyframes clouds {
+	0% {
+		left: -100px;
+	}
+	40% {
+		left: 1300px;
+	}
+	60% {
+		left: 1300px;
+	}
+	100% {
+		left: -100px;
+	}
+}
+
+@keyframes car {
+	from {
+		left: 1300px;
+	}
+	to {
+		left: -300px;
+	}
+}

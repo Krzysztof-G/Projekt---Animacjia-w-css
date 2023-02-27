@@ -1,3 +1,5 @@
+@use './animation' as animation;
+
 .ground {
 	position: relative;
 	height: 20vh;
@@ -16,6 +18,7 @@
 			background-color: rgb(110, 30, 118);
 			border-top-left-radius: 70px;
 			border-top-right-radius: 70px;
+			animation: car 8s linear 1;
 
 			.door-handle {
 				position: absolute;

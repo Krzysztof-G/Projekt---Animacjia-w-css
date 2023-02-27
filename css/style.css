@@ -48,14 +48,66 @@ table {
   border-spacing: 0;
 }
 
+@keyframes sky {
+  0% {
+    background-color: black;
+  }
+  40% {
+    background-color: royalblue;
+  }
+  60% {
+    background-color: royalblue;
+  }
+  100% {
+    background-color: black;
+  }
+}
+@keyframes sun {
+  0% {
+    top: 1000px;
+  }
+  40% {
+    top: 100px;
+  }
+  60% {
+    top: 100px;
+  }
+  100% {
+    top: 1000px;
+  }
+}
+@keyframes clouds {
+  0% {
+    left: -100px;
+  }
+  40% {
+    left: 1300px;
+  }
+  60% {
+    left: 1300px;
+  }
+  100% {
+    left: -100px;
+  }
+}
+@keyframes car {
+  from {
+    left: 1300px;
+  }
+  to {
+    left: -300px;
+  }
+}
 .sky {
   position: relative;
   height: 60vh;
   width: 100%;
   background-color: royalblue;
+  animation: sky 7s linear 1;
 }
 .sky .clouds {
   position: absolute;
+  animation: clouds 8s linear 1;
 }
 .sky .clouds:nth-child(2) {
   top: 8vh;
@@ -100,13 +152,14 @@ table {
 }
 .sky .sun {
   position: absolute;
-  top: 5%;
-  left: 10%;
+  top: 10px;
+  left: 300px;
   width: 100px;
   height: 100px;
   background-color: goldenrod;
   border-radius: 50%;
   box-shadow: 0 0 100px 50px goldenrod;
+  animation: sun 8s linear 1;
 }
 
 .ground {
@@ -129,6 +182,7 @@ table {
   background-color: rgb(110, 30, 118);
   border-top-left-radius: 70px;
   border-top-right-radius: 70px;
+  animation: car 8s linear 1;
 }
 .ground .road .car .door-handle {
   position: absolute;
@@ -223,4 +277,8 @@ table {
   height: 20vh;
   width: 100%;
   background-color: green;
+}
+
+body {
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */
