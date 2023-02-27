@@ -7,6 +7,105 @@
 		height: 15vh;
 		width: 100%;
 		background-color: gray;
+		.car {
+			position: absolute;
+			top: 20px;
+			left: 30vw;
+			width: 150px;
+			height: 55px;
+			background-color: rgb(110, 30, 118);
+			border-top-left-radius: 70px;
+			border-top-right-radius: 70px;
+
+			.door-handle {
+				position: absolute;
+				top: 30px;
+				width: 10px;
+				height: 3px;
+				background-color: rgb(78, 22, 84);
+			}
+			.front-door-handle {
+				left: 60px;
+			}
+			.rear-door-handle {
+				right: 36px;
+			}
+
+			.window {
+				position: absolute;
+				top: 4px;
+				width: 43px;
+				height: 20px;
+				background-color: rgb(22, 41, 97);
+				border: 1px solid rgb(134, 131, 131);
+			}
+			.front-window {
+				left: 30px;
+				border-top-left-radius: 50px;
+			}
+			.rear-window {
+				right: 30px;
+				border-top-right-radius: 50px;
+			}
+			.light {
+				position: absolute;
+				background-color: rgb(160, 218, 232);
+			}
+			.front-light {
+				top: 30px;
+				left: -30px;
+				width: 13px;
+				height: 7px;
+				border-top-left-radius: 50px;
+				box-shadow: -45px 10px 30px 25px rgb(160, 218, 232);
+			}
+			.rear-light {
+				top: 30px;
+				right: -15px;
+				width: 13px;
+				height: 7px;
+				background-color: orangered;
+				border-top-right-radius: 50px;
+				box-shadow: 5px 1px 14px 4px orangered;
+				z-index: 1;
+			}
+			.wheel {
+				position: absolute;
+				bottom: -7px;
+				width: 35px;
+				height: 35px;
+				background-color: black;
+				border-radius: 50%;
+				border: 1px dashed rgb(122, 122, 122);
+			}
+			.front-wheel {
+				left: -10px;
+			}
+			.rear-wheel {
+				right: 0px;
+				z-index: 1;
+			}
+		}
+		.car::before,
+		.car::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 40px;
+			height: 33px;
+			background-color: rgb(110, 30, 118);
+		}
+		.car::after {
+			right: -20px;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 7px;
+		}
+		.car::before {
+			left: -40px;
+			width: 60px;
+			border-top-left-radius: 70px;
+			border-bottom-left-radius: 7px;
+		}
 	}
 	.grass {
 		position: absolute;
@@ -14,22 +113,5 @@
 		height: 20vh;
 		width: 100%;
 		background-color: green;
-		.fence {
-			position: relative;
-			.tree {
-				position: absolute;
-				top: -13px;
-				height: 30px;
-				width: 70px;
-				background-color: green;
-				border-radius: 25px 25px 20px 0;
-				&:nth-child(2) {
-					top: -18px;
-					left: 30px;
-					width: 50px;
-					border-radius: 25px 25px 25px 0;
-				}
-			}
-		}
 	}
 }

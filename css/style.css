@@ -54,6 +54,50 @@ table {
   width: 100%;
   background-color: royalblue;
 }
+.sky .clouds {
+  position: absolute;
+}
+.sky .clouds:nth-child(2) {
+  top: 8vh;
+  left: 10vh;
+}
+.sky .clouds:nth-child(3) {
+  top: 5vh;
+  left: 19vh;
+}
+.sky .clouds:nth-child(4) {
+  top: -8vh;
+  left: 13vh;
+}
+.sky .clouds .cloud {
+  position: absolute;
+  top: 10vh;
+  left: 1vh;
+  height: 5vh;
+  width: 5vh;
+  background-color: #fff;
+  border-radius: 35px 0 25px 20px;
+  box-shadow: 0 0 20px 11px;
+}
+.sky .clouds .cloud:nth-child(2) {
+  position: absolute;
+  top: 9vh;
+  left: 3vh;
+  border-radius: 25px 15px 0 0;
+}
+.sky .clouds .cloud:nth-child(3) {
+  position: absolute;
+  top: 10vh;
+  left: 4vh;
+  width: 8vh;
+  border-radius: 25px 35px 25px 0;
+}
+.sky .clouds .cloud:nth-child(4) {
+  position: absolute;
+  top: 11vh;
+  left: 6vh;
+  border-radius: 0 0 25px 15px;
+}
 .sky .sun {
   position: absolute;
   top: 5%;
@@ -76,72 +120,107 @@ table {
   width: 100%;
   background-color: gray;
 }
+.ground .road .car {
+  position: absolute;
+  top: 20px;
+  left: 30vw;
+  width: 150px;
+  height: 55px;
+  background-color: rgb(110, 30, 118);
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+}
+.ground .road .car .door-handle {
+  position: absolute;
+  top: 30px;
+  width: 10px;
+  height: 3px;
+  background-color: rgb(78, 22, 84);
+}
+.ground .road .car .front-door-handle {
+  left: 60px;
+}
+.ground .road .car .rear-door-handle {
+  right: 36px;
+}
+.ground .road .car .window {
+  position: absolute;
+  top: 4px;
+  width: 43px;
+  height: 20px;
+  background-color: rgb(22, 41, 97);
+  border: 1px solid rgb(134, 131, 131);
+}
+.ground .road .car .front-window {
+  left: 30px;
+  border-top-left-radius: 50px;
+}
+.ground .road .car .rear-window {
+  right: 30px;
+  border-top-right-radius: 50px;
+}
+.ground .road .car .light {
+  position: absolute;
+  background-color: rgb(160, 218, 232);
+}
+.ground .road .car .front-light {
+  top: 30px;
+  left: -30px;
+  width: 13px;
+  height: 7px;
+  border-top-left-radius: 50px;
+  box-shadow: -45px 10px 30px 25px rgb(160, 218, 232);
+}
+.ground .road .car .rear-light {
+  top: 30px;
+  right: -15px;
+  width: 13px;
+  height: 7px;
+  background-color: orangered;
+  border-top-right-radius: 50px;
+  box-shadow: 5px 1px 14px 4px orangered;
+  z-index: 1;
+}
+.ground .road .car .wheel {
+  position: absolute;
+  bottom: -7px;
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  border-radius: 50%;
+  border: 1px dashed rgb(122, 122, 122);
+}
+.ground .road .car .front-wheel {
+  left: -10px;
+}
+.ground .road .car .rear-wheel {
+  right: 0px;
+  z-index: 1;
+}
+.ground .road .car::before,
+.ground .road .car::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 33px;
+  background-color: rgb(110, 30, 118);
+}
+.ground .road .car::after {
+  right: -20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 7px;
+}
+.ground .road .car::before {
+  left: -40px;
+  width: 60px;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 7px;
+}
 .ground .grass {
   position: absolute;
   top: 0;
   height: 20vh;
   width: 100%;
   background-color: green;
-}
-.ground .grass .fence {
-  position: relative;
-}
-.ground .grass .fence .tree {
-  position: absolute;
-  top: -13px;
-  height: 30px;
-  width: 70px;
-  background-color: green;
-  border-radius: 25px 25px 20px 0;
-}
-.ground .grass .fence .tree:nth-child(2) {
-  top: -18px;
-  left: 30px;
-  width: 50px;
-  border-radius: 25px 25px 25px 0;
-}
-
-.clouds {
-  position: absolute;
-}
-.clouds:nth-child(2) {
-  top: 8vh;
-  left: 10vh;
-}
-.clouds:nth-child(3) {
-  top: 5vh;
-  left: 19vh;
-}
-.clouds:nth-child(4) {
-  top: -8vh;
-  left: 13vh;
-}
-.clouds .cloud {
-  position: absolute;
-  top: 10vh;
-  left: 1vh;
-  height: 5vh;
-  width: 5vh;
-  background-color: #fff;
-  border-radius: 35px 0 25px 20px;
-  box-shadow: 0 0 20px 11px;
-}
-.clouds .cloud:nth-child(2) {
-  position: absolute;
-  top: 9vh;
-  left: 3vh;
-  border-radius: 25px 15px 0 0;
-}
-.clouds .cloud:nth-child(3) {
-  position: absolute;
-  top: 10vh;
-  left: 4vh;
-  width: 8vh;
-  border-radius: 25px 35px 25px 0;
-}
-.clouds .cloud:nth-child(4) {
-  position: absolute;
-  top: 11vh;
-  left: 6vh;
-  border-radius: 0 0 25px 15px;
 }/*# sourceMappingURL=style.css.map */
